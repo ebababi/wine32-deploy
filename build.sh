@@ -71,7 +71,7 @@ cp appimagetool-x86_64.AppImage "${WorkingDir}"
 # Build AppImage
 
 ./appimagetool-x86_64.AppImage --appimage-extract-and-run "${WorkingDir}"
-mv "Wine-x86_64.AppImage" "Wine-${Version}-x86_64.AppImage"
-zsyncmake "Wine-${Version}-x86_64.AppImage"
+mv "Wine-x86_64.AppImage" "wine32-deploy-${Version}-x86_64.AppImage"
+zsyncmake "wine32-deploy-${Version}-x86_64.AppImage"
 
 exit
