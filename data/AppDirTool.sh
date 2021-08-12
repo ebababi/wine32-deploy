@@ -99,12 +99,14 @@ function appdir.test(){
   export HOME=$(mktemp -d)
   export XDG_CONFIG_HOME="${HOME}/config"
   export XDG_DATA_HOME="${HOME}/data"
+  export WINEPREFIX="${XDG_CONFIG_HOME}/${BOTTLE_NAME}"
   export LANG=en.UTF-8
   echo
   echo HOME=${HOME}
   echo XDG_CONFIG_HOME=${XDG_CONFIG_HOME}
   echo XDG_DATA_HOME="${XDG_DATA_HOME}"
   echo WINEPREFIX="${XDG_CONFIG_HOME}/${BOTTLE_NAME}"
+  echo LANG=en.UTF-8
   echo
   echo "[ 2/3 ] Initializing test..."
   echo
