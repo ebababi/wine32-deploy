@@ -22,8 +22,7 @@ HERE="$(dirname "$(readlink -f "${0}")")"
 }
 
 export WINEARCH=win32
-export WINEPREFIX="${XDG_CONFIG_HOME}/SumatraPDF"
-
+export WINEPREFIX="${XDG_CONFIG_HOME}/$(basename "$(ls "$(dirname "$(readlink -f "${0}")")"/*.desktop)" .desktop)"
 
 # Some Languages uses symbols that breakes Wine
 export LANG=en.UTF-8
